@@ -1,39 +1,31 @@
-import { Suspense, ReactNode } from 'react';
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
-import FeaturesAccordion from "@/components/FeaturesAccordion";
-import Pricing from "@/components/Pricing";
-import Testimonials3 from "@/components/Testimonials3";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
+import SpellingGame from "@/components/SpellingGame";
 import { Metadata } from 'next';
 
-// Add metadata for SEO
 export const metadata: Metadata = {
-  title: 'FeNAgO - Agentic AI SaaS Platform Template',
-  description: 'The complete platform for building agentic AI-powered SaaS products—ideal for students, developers, startups, and entrepreneurs looking to innovate rapidly. In the near future, every traditional SaaS application will inevitably be surpassed by an Agentic SaaS solution, redefining the competitive landscape.',
-  keywords: 'agentic AI, SaaS template, AI platform, DrLee, AI development, FeNAgO, AI startup',
+  title: "Kindergarten Spelling Game",
+  description: "A fun educational game for learning to spell new words",
 };
 
 export default function Home(): JSX.Element {
   return (
-    <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Header />
-      </Suspense>
-      <main>
-        {/* FeNAgO - The complete platform for building agentic AI-powered SaaS products */}
-        <Hero />
-        <Problem />
-        <FeaturesAccordion />
-        <Pricing />
-        <Testimonials3 />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-    </>
+    <main className="min-h-screen flex flex-col items-center p-4 py-8 md:py-16 bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 font-sans">
+      <div className="w-full max-w-4xl text-center flex flex-col items-center flex-1">
+        
+        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 mb-6 w-full drop-shadow-sm">
+          🌟 Spelling Adventure!
+        </h1>
+        
+        <p className="text-lg md:text-xl text-gray-700 font-medium mb-12 max-w-2xl text-center">
+          Listen to the magic words, pick the correct letters below, and spell them out to win! 
+          We brought the best words for you today. Have fun! 🎉
+        </p>
+
+        <SpellingGame />
+      </div>
+
+      <footer className="mt-16 text-center text-gray-500 font-medium text-sm">
+        <p>Created for fun spelling practice!</p>
+      </footer>
+    </main>
   );
 }
